@@ -1,0 +1,43 @@
+<template>
+  <div class="product-item">
+    <div class="mb-4">
+      <img :src="item.image" class="w-100" />
+    </div>
+    <h3>{{item.name}}</h3>
+    <div>
+      <span class="price">{{item.price}}</span>
+    </div>
+    <div>
+      <button class="btn btn-danger w-100 btn-cart" @click="addToCart">
+        Добавить в корзину
+      </button>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Product",
+  data() {
+    return {
+      item: {
+        id: 1,
+        name: 'Huawei P Smart 2021',
+        price: '13 990 ₽',
+        image: 'https://img.mvideo.ru/Pdb/30053814b.jpg'
+      }
+    }
+  },
+  methods: {
+    addToCart(event) {
+      event.target.classList.remove('btn-danger')
+      event.target.classList.add('btn-warning')
+
+      setTimeout(() => {
+        event.target.classList.remove('btn-warning')
+        event.target.classList.add('btn-danger')
+      }, 2000)
+    }
+  }
+}
+</script>

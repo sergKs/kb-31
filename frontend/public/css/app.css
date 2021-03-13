@@ -1,0 +1,32 @@
+body {
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav {
+    background-color: #333;
+}
+
+nav li {
+    margin-right: 15px;
+}
+
+nav li a {
+    color: #fff;
+}
+
+.product-item {
+    background-color: #fff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0.1rem 2rem rgb(4 6 28 / 10%);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+}
