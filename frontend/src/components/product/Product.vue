@@ -1,13 +1,15 @@
 <template>
   <div class="product-item">
-    <div class="mb-4">
-      <img :src="item.image" class="w-100" />
-    </div>
-    <h3>{{item.name}}</h3>
-    <div>
-      <span class="price">{{item.price}}</span>
-    </div>
-    <div>
+    <router-link :to="{name: 'ProductInfo', params: {id: item.id}}">
+      <div class="mb-4">
+        <img :src="item.image" class="w-100" />
+      </div>
+      <h3>{{item.name}}</h3>
+      <div>
+        <span class="price">{{item.price}}</span>
+      </div>
+    </router-link>
+    <div class="mt-2">
       <button class="btn btn-danger w-100 btn-cart" @click="addToCart">
         Добавить в корзину
       </button>

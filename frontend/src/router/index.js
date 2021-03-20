@@ -5,6 +5,7 @@ import About from '../views/About'
 import Contact from "@/views/Contact";
 import Catalog from "@/views/Catalog";
 import Login from "@/views/Login";
+import ProductInfo from "@/views/ProductInfo";
 
 Vue.use(VueRouter)
 
@@ -28,6 +29,11 @@ const routes = [
     path: '/catalog',
     name: 'Catalog',
     component: Catalog
+  },
+  {
+    path: '/catalog/:id',
+    name: 'ProductInfo',
+    component: ProductInfo
   },
   {
     path: '/login',

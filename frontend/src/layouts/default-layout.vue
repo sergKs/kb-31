@@ -20,11 +20,14 @@
           <li>
             <router-link :to="{name: 'Contact'}">Контакты</router-link>
           </li>
+          <li>
+            <router-link :to="{name: 'Login'}">Войти</router-link>
+          </li>
         </ul>
       </nav>
     </header>
-    <main class="mt-4">
-      <div class="container mb-2">
+    <main>
+      <div class="mb-2">
         <slot />
       </div>
     </main>

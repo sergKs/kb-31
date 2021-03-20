@@ -25,8 +25,27 @@ nav li a {
     box-shadow: 0 0.1rem 2rem rgb(4 6 28 / 10%);
 }
 
+.product-item a {
+    color: #333;
+}
+
+.product-item a:hover {
+    text-decoration: none;
+    color: #777;
+}
+
 footer {
     background-color: #333;
     color: #fff;
     padding: 15px;
+}
+
+.login-form {
+    width: 450px;
+    margin: 0 auto;
+}
+
+.error {
+    font-size: 13px;
+    color: red;
 }

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container mt-4">
     <h1 class="mb-4">Каталог товаров</h1>
     <div class="row">
       <section class="col-md-3">
