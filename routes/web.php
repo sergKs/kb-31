@@ -25,6 +25,10 @@ $router->group(['prefix' => 'api'], function () use ($router) {
         $router->get('list/{id}', ['uses' => 'ProductController@info']);
     });
 
+    $router->group(['prefix' => 'categories'], function () use ($router) {
+        $router->get('list', ['uses' => 'CategoryController@list']);
+    });
+
     $router->group(['prefix' => 'slider'], function () use ($router) {
         $router->get('list', ['uses' => 'SliderController@list']);
     });
