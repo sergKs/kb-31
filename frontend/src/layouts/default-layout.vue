@@ -24,6 +24,7 @@
             <router-link :to="{name: 'Login'}">Войти</router-link>
           </li>
         </ul>
+        <Cart></Cart>
       </nav>
     </header>
     <main>
@@ -60,7 +61,9 @@
 </template>
 
 <script>
+import Cart from "@/components/Cart";
 export default {
-  name: "login-layout"
+  name: "login-layout",
+    components: {Cart}
 }
 </script>

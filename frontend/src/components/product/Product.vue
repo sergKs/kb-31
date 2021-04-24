@@ -23,6 +23,16 @@ export default {
   props: ['item'],
   methods: {
     addToCart(event) {
+      const data = {
+          count: 1,
+          productId: this.item.id
+      }
+
+      this.$http.post('/api/cart/add', data)
+        .then((response) => {
+            alert('Товар добавлен!')
+        })
+
       event.target.classList.remove('btn-danger')
       event.target.classList.add('btn-warning')
 

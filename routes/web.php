@@ -33,6 +33,11 @@ $router->group(['prefix' => 'api'], function () use ($router) {
         $router->get('list', ['uses' => 'SliderController@list']);
     });
 
+    $router->group(['prefix' => 'cart'], function () use ($router) {
+        $router->get('/', ['uses' => 'CartController@info']);
+        $router->post('/add', ['uses' => 'CartController@add']);
+    });
+
     // http://localhost/api/products/list/77
 
 });
