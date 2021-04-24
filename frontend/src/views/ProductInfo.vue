@@ -40,17 +40,13 @@ export default {
   name: "ProductInfo",
   data() {
     return {
-      item: {
-        id: 1,
-        name: 'Huawei P Smart 2021',
-        price: '13 990 ₽',
-        image: 'https://img.mvideo.ru/Pdb/30053814b.jpg'
-      }
+      item: null
     }
   },
   created() {
     const id = this.$route.params.id
-    // get запрос
+    this.$http.get('/api/products/list/' + id)
+      .then((response) => this.item = response.data)
   },
 
   methods: {

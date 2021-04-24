@@ -17,6 +17,6 @@ class ProductController extends Controller
     {
         return Product::query()
             ->where(['id' => $id])
-            ->get();
+            ->firstOrFail();
     }
 }

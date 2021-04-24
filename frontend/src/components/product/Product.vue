@@ -20,16 +20,7 @@
 <script>
 export default {
   name: "Product",
-  data() {
-    return {
-      item: {
-        id: 1,
-        name: 'Huawei P Smart 2021',
-        price: '13 990 ₽',
-        image: 'https://img.mvideo.ru/Pdb/30053814b.jpg'
-      }
-    }
-  },
+  props: ['item'],
   methods: {
     addToCart(event) {
       event.target.classList.remove('btn-danger')
